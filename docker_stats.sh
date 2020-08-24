@@ -13,8 +13,9 @@ body() {
 
 while :
 do
+  echo '==================================='
   clear
   docker stats --no-stream --format "table {{.MemPerc}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.Name}}" | \
-    body sort -k5 -nr
+    body sort -k1 -nr
   sleep 60
 done
