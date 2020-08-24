@@ -1,4 +1,6 @@
 #!/usr/local/bin/bash
+
+# Display docker stats sorted by memory usage
 while :
 do
   clear

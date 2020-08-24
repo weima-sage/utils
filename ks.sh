@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# No body likes MCAfee
 while :
 do
   `pkill VShield`
@@ -6,5 +8,5 @@ do
   `pkill ampdaemon`
   `pkill ampscansvn`
   `pkill ampcreport`
-  sleep 1 
+  sleep 1
 done
