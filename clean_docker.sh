@@ -1,4 +1,6 @@
 #!/usr/local/bin/bash
+echo "Shutting down containers..."
+docker stop $(docker ps -qa)
 echo "Cleaning containers..."
 docker container prune -f
 echo "Cleaning volumes..."
