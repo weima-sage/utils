@@ -1,8 +1,8 @@
-# Improving debugging experience with pry configuration
+## Improving debugging experience with pry configuration
 
 Background: `pry-byebug` provides a powerful tool for us to perform debugging tasks. Sometimes, typing the full command feels tiring. The following tricks can help reduce amount of typing and making debugging more pleasant.
 
-1. First create a .pryrc file at your home directory
+### First create a .pryrc file at your home directory
 
 ```ruby
 if defined?(PryByebug)
@@ -26,8 +26,8 @@ if defined?(PryByebug)
 end
 ```
 
-2. Mount the .pryrc file into the image we are going to debug.
-   In `docker-compose-start.local.yml` file, mount the configuration file to image
+### Mount the .pryrc file into the image we are going to debug.
+  In `docker-compose-start.local.yml` file, mount the configuration file to image
 
 ```yml
 services:
@@ -37,7 +37,4 @@ services:
       - ~/.pryrc:/root/.pryrc
 ```
 
-3. Start application with ```script/docker/start.sh --clean```, you should be able to use the shortcuts in the configuration file.
-
-
-
+### Start application with `script/docker/start.sh --clean`, you should be able to use the shortcuts in the configuration file.
